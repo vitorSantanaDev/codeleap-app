@@ -15,7 +15,11 @@ export const FormWrapper = styled.div`
 export const Form = styled.form``
 
 export const ButtonWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
+  ${({ theme }) => css`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: ${theme.spacings.xxsmall};
+  `}
 `
