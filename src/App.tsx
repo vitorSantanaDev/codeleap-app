@@ -1,11 +1,7 @@
 import React from 'react'
 
 function App() {
-  return (
-    <div className="App">
-      <span>CodeLeap App</span>
-    </div>
-  )
+  return <h1>Codeleap App</h1>
 }
 
 export default App
