@@ -7,7 +7,6 @@ const TextInput: React.FC<TextInputProps> = ({
   name,
   label,
   handleChange,
-  disabled = false,
   initialValue = '',
   ...restProps
 }) => {
@@ -27,7 +26,6 @@ const TextInput: React.FC<TextInputProps> = ({
         type="text"
         name={name}
         value={value}
-        disabled={disabled}
         onChange={onChangeInput}
         {...(label ? { id: name } : {})}
         {...restProps}
