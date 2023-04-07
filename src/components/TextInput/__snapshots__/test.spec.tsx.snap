@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInput /> should match snapshot 1`] = `
+.c1 {
+  width: 100%;
+  display: block;
+  outline: none;
+  color: #000000;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  border: 1px solid #777777;
+}
+
+.c1::-webkit-input-placeholder {
+  color: #CCCCCC;
+}
+
+.c1::-moz-placeholder {
+  color: #CCCCCC;
+}
+
+.c1:-ms-input-placeholder {
+  color: #CCCCCC;
+}
+
+.c1::placeholder {
+  color: #CCCCCC;
+}
+
+.c0 {
+  display: inline-block;
+  color: #000000;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+<div
+  class=""
+>
+  <label
+    class="c0"
+    for="title"
+  >
+    Title
+  </label>
+  <input
+    class="c1"
+    id="title"
+    name="title"
+    type="text"
+    value=""
+  />
+</div>
+`;
