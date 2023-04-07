@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PostCard /> should match snapshot 1`] = `
+.c2 {
+  font-weight: 700;
+  color: #FFFFFF;
+  padding: calc(2.4rem + 0.3rem) calc(3.2rem + 0.5rem);
+  background-color: #7695EC;
+  font-size: calc(2.0rem + 0.2rem);
+}
+
+.c0 {
+  border: 1px solid #999999;
+  border-bottom-right-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+}
+
+.c0 .c1 {
+  border-top-right-radius: 0.8rem;
+  border-top-left-radius: 0.8rem;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.c5 {
+  padding: 2.4rem;
+}
+
+.c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+
+.c7 {
+  font-weight: 700;
+  color: #777777;
+  font-size: calc(1.6rem + 0.2rem);
+}
+
+.c8 {
+  font-weight: 400;
+  color: #777777;
+  font-size: calc(1.6rem + 0.2rem);
+}
+
+.c9 {
+  color: #000000;
+  font-weight: 400;
+  font-size: calc(1.6rem + 0.2rem);
+}
+
+<div
+  class="c0"
+>
+  <header
+    class="c1 c2"
+  >
+    <div
+      class="c3"
+    >
+      <span>
+        My First Post at CodeLeap Network!
+      </span>
+      <div
+        class="c4"
+      >
+        <img
+          alt="Trash icon"
+          role="button"
+          src="delete-icon.svg"
+        />
+        <img
+          alt="Edit icon"
+          role="button"
+          src="bx_bx-edit.svg"
+        />
+      </div>
+    </div>
+  </header>
+  <div
+    class="c5"
+  >
+    <div
+      class="c6"
+    >
+      <h2
+        class="c7"
+      >
+        @Victor
+      </h2>
+      <span
+        class="c8"
+      >
+        07/03/2023
+      </span>
+    </div>
+    <p
+      class="c9"
+    >
+      Curabitur suscipit suscipit tellus.
+    </p>
+  </div>
+</div>
+`;
