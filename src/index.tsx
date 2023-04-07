@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom/client'
 
 import App from './App'
 
-import { persistor, store } from 'redux/store'
-
 import { Provider } from 'react-redux'
+import { persistor, store } from 'redux/store'
 import { ThemeProvider } from 'styled-components'
 import { PersistGate } from 'redux-persist/integration/react'
-
 import theme from 'styles/theme'
 import { GlobalStyles } from 'styles/global-styles'
 

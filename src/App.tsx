@@ -1,7 +1,8 @@
 import React from 'react'
+import AppRoutes from 'routes/index.routes'
 
 function App() {
-  return <h1>Codeleap App</h1>
+  return <AppRoutes />
 }
 
 export default App
