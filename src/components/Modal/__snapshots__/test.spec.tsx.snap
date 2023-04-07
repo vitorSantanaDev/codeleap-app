@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal /> should match snapshot 1`] = `
+.c0 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  z-index: 40;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: all;
+  background-color: rgba(119,119,119,0.8);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  width: 100%;
+  max-width: 66rem;
+  padding: 2.4rem;
+  border-radius: 0.8rem;
+  background-color: #FFFFFF;
+  border: 1px solid #999999;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    padding: 0px 2.4rem;
+  }
+}
+
+<div
+  aria-hidden="false"
+  aria-label="modal"
+  class="c0"
+  role="presentation"
+>
+  <div
+    class="c1"
+  >
+    <h1>
+      Modal
+    </h1>
+  </div>
+</div>
+`;
