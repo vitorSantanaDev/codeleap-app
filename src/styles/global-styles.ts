@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -8,11 +8,16 @@ export const GlobalStyles = createGlobalStyle`
 
   }
 
-  body {
-    font-family: 'Roboto', sans-serif;
-  }
+  ${({ theme }) => css`
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-family: ${theme.font.family};
+      font-size: ${theme.font.sizes.medium};
+    }
 
-  html {
+    html {
       font-size: 62.5%;
     }
+  `}
+
 `
