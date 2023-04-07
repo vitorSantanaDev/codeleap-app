@@ -68,4 +68,9 @@ describe('<Button />', () => {
       modifier: ':disabled'
     })
   })
+
+  it('should match snapshot', () => {
+    const { container } = renderWithTheme(<Button>Button</Button>)
+    expect(container.firstChild).toMatchSnapshot()
+  })
 })
