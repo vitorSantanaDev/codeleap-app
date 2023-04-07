@@ -1,14 +1,16 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import storage from 'redux-persist/lib/storage'
-import { persistReducer, persistStore } from 'redux-persist'
 import thunk from 'redux-thunk'
+import storage from 'redux-persist/lib/storage'
+import { userReducer } from './actions/user-slice'
+import { persistReducer, persistStore } from 'redux-persist'
+import { combineReducers, configureStore } from '@reduxjs/toolkit'
 
 const persistConfig = {
   key: 'root',
-  storage
+  storage,
+  whitelist: ['user']
 }
 
-const rootReducer = combineReducers({})
+const rootReducer = combineReducers({ user: userReducer })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
