@@ -1,13 +1,13 @@
 import React from 'react'
 import { screen } from '@testing-library/react'
 
-import { renderWithTheme } from 'utils/render-with-theme'
+import { renderWithProviders } from 'utils/render-with-theme'
 
 import CreationForm from '.'
 
 describe('<CreationForm />', () => {
   it('should render the form', () => {
-    renderWithTheme(<CreationForm />)
+    renderWithProviders(<CreationForm />)
 
     const titleInput = screen.getByPlaceholderText(/title/i)
     expect(titleInput).toBeInTheDocument()
@@ -20,7 +20,7 @@ describe('<CreationForm />', () => {
   })
 
   it('should match snapshot', () => {
-    const { container } = renderWithTheme(<CreationForm />)
+    const { container } = renderWithProviders(<CreationForm />)
     expect(container.firstChild).toMatchSnapshot()
   })
 })

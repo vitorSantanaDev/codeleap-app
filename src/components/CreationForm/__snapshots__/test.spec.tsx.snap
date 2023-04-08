@@ -171,6 +171,7 @@ exports[`<CreationForm /> should match snapshot 1`] = `
     >
       <button
         class="c6"
+        disabled=""
         type="submit"
       >
         Create
