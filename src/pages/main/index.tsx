@@ -21,10 +21,12 @@ import * as S from './styles'
 const MainPage = () => {
   const dispatch = useDispatch()
   const {
+    isRefetching,
     data: postsData,
     refetch: refetchPostsData,
     isLoading: isLoadingPostsData
   } = useGetAllPosts()
+
   const { mutateAsync: deletePostMutation } = useMutationDeletePost()
 
   const showEditPostModal = useStateSelector(
@@ -52,11 +54,11 @@ const MainPage = () => {
       <Header>CodeLeap Network</Header>
       <S.Container>
         <S.FormCreationWrapper>
-          <CreationForm />
+          <CreationForm refetchPostsData={refetchPostsData} />
         </S.FormCreationWrapper>
 
         <S.FeedWrapper>
-          {isLoadingPostsData ? (
+          {isLoadingPostsData || isRefetching ? (
             <Loading />
           ) : postsData?.length ? (
             <Feed posts={postsData} />

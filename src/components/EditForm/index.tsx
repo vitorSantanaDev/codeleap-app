@@ -17,7 +17,7 @@ import * as BaseFormLayout from 'components/Layouts/BaseFormLayout'
 const EditForm: React.FC = () => {
   const dispatch = useDispatch()
 
-  const { data: postsData } = useGetAllPosts()
+  const { data: postsData, refetch: refetchPostsData } = useGetAllPosts()
 
   const postID = useStateSelector((state) => state.editPostModal.postID)
 
@@ -44,6 +44,7 @@ const EditForm: React.FC = () => {
         payload: { content: inputsValues.content, title: inputsValues.title },
         postID: postID
       })
+      refetchPostsData()
       setInputValues({ content: '', title: '' })
       dispatch(toggleEditPostModal(null))
       toast.success('Post successfully updated')

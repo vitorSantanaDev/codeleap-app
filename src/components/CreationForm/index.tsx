@@ -13,11 +13,13 @@ import { useStateSelector } from 'hooks/useStateSelector'
 
 import * as BaseFormLayout from 'components/Layouts/BaseFormLayout'
 
-const CreationForm: React.FC = () => {
+const CreationForm: React.FC<{ refetchPostsData?: () => void }> = ({
+  refetchPostsData
+}) => {
   const username = useStateSelector((state) => state.user.username)
   const [inputsValues, setInputValues] = useState({ title: '', content: '' })
 
-  const { mutateAsync: createPostMutation, isLoading } = useMutationCreatePost()
+  const { isLoading, mutateAsync: createPostMutation } = useMutationCreatePost()
 
   const handleInputChange = (fieldName: string, value: string) => {
     setInputValues((prevState) => ({ ...prevState, [fieldName]: value }))
@@ -30,6 +32,7 @@ const CreationForm: React.FC = () => {
       title: inputsValues.title,
       username: username
     })
+    refetchPostsData?.()
     setInputValues({ content: '', title: '' })
     toast.success('Post created successfully')
   }
