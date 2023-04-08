@@ -63,27 +63,32 @@ const MainPage = () => {
           ) : null}
         </S.FeedWrapper>
       </S.Container>
-      <Modal isVisible={showEditPostModal}>
-        <EditForm />
-      </Modal>
-      <Modal isVisible={showDeletePostAlert}>
-        <S.AlertDeletePost>
-          <Heading size="xlarge">
-            Are you sure you want to delete this item?
-          </Heading>
-          <ButtonWrapper>
-            <Button
-              bgColor="white"
-              onClick={() => dispatch(toggleDeletePostAlert(null))}
-            >
-              Cancel
-            </Button>
-            <Button onClick={handleDeletePost} bgColor="red">
-              Delete
-            </Button>
-          </ButtonWrapper>
-        </S.AlertDeletePost>
-      </Modal>
+      {showEditPostModal && (
+        <Modal isVisible={showEditPostModal}>
+          <EditForm />
+        </Modal>
+      )}
+
+      {showDeletePostAlert && (
+        <Modal isVisible={showDeletePostAlert}>
+          <S.AlertDeletePost>
+            <Heading size="xlarge">
+              Are you sure you want to delete this item?
+            </Heading>
+            <ButtonWrapper>
+              <Button
+                bgColor="white"
+                onClick={() => dispatch(toggleDeletePostAlert(null))}
+              >
+                Cancel
+              </Button>
+              <Button onClick={handleDeletePost} bgColor="red">
+                Delete
+              </Button>
+            </ButtonWrapper>
+          </S.AlertDeletePost>
+        </Modal>
+      )}
     </S.Wrapper>
   )
 }

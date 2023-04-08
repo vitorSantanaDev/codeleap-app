@@ -34,12 +34,14 @@ const PostCard: React.FC<PostCardProps> = ({ myPost, post }) => {
                 role="button"
                 src={TrashIcon}
                 alt="Trash icon"
+                aria-label="Trash icon"
                 onClick={() => dispatch(toggleDeletePostAlert(post.id))}
               />
               <img
                 role="button"
                 src={EditIcon}
                 alt="Edit icon"
+                aria-label="Edit icon"
                 onClick={() => dispatch(toggleEditPostModal(post.id))}
               />
             </S.ActionButtonsWrapper>
