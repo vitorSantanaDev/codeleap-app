@@ -108,11 +108,13 @@ exports[`<PostCard /> should match snapshot 1`] = `
       >
         <img
           alt="Trash icon"
+          aria-label="Trash icon"
           role="button"
           src="delete-icon.svg"
         />
         <img
           alt="Edit icon"
+          aria-label="Edit icon"
           role="button"
           src="bx_bx-edit.svg"
         />
