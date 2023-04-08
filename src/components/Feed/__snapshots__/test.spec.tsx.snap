@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Feed /> should macth snapshots 1`] = `
+.c2 {
+  font-weight: 700;
+  color: #FFFFFF;
+  padding: calc(2.4rem + 0.3rem) calc(3.2rem + 0.5rem);
+  background-color: #7695EC;
+  font-size: calc(2.0rem + 0.2rem);
+}
+
+.c0 {
+  border: 1px solid #999999;
+  border-radius: 0.8rem;
+  border-radius: 0.8rem;
+}
+
+.c0 .c1 {
+  border-top-right-radius: 0.8rem;
+  border-top-left-radius: 0.8rem;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c4 {
+  padding: 2.4rem;
+}
+
+.c5 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+
+.c6 {
+  font-weight: 700;
+  color: #777777;
+  font-size: calc(1.6rem + 0.2rem);
+}
+
+.c7 {
+  font-weight: 400;
+  color: #777777;
+  font-size: calc(1.6rem + 0.2rem);
+}
+
+.c8 {
+  color: #000000;
+  font-weight: 400;
+  font-size: calc(1.6rem + 0.2rem);
+}
+
+<div
+  class=""
+>
+  <div
+    style="margin-bottom: 2.4rem;"
+  >
+    <div
+      class="c0"
+    >
+      <header
+        class="c1 c2"
+      >
+        <div
+          class="c3"
+        >
+          <span>
+            My First Post at CodeLeap Network!
+          </span>
+        </div>
+      </header>
+      <div
+        class="c4"
+      >
+        <div
+          class="c5"
+        >
+          <h2
+            class="c6"
+          >
+            Cassia
+          </h2>
+          <span
+            class="c7"
+          >
+            0 seconds ago
+          </span>
+        </div>
+        <p
+          class="c8"
+        >
+          Curabitur suscipit suscipit tellus. Phasellus consectetuer vestibulum elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    style="margin-bottom: 2.4rem;"
+  >
+    <div
+      class="c0"
+    >
+      <header
+        class="c1 c2"
+      >
+        <div
+          class="c3"
+        >
+          <span>
+            My First Post at CodeLeap Network!
+          </span>
+        </div>
+      </header>
+      <div
+        class="c4"
+      >
+        <div
+          class="c5"
+        >
+          <h2
+            class="c6"
+          >
+            Fran
+          </h2>
+          <span
+            class="c7"
+          >
+            0 seconds ago
+          </span>
+        </div>
+        <p
+          class="c8"
+        >
+          Curabitur suscipit suscipit tellus. Phasellus consectetuer vestibulum elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    style="margin-bottom: 2.4rem;"
+  >
+    <div
+      class="c0"
+    >
+      <header
+        class="c1 c2"
+      >
+        <div
+          class="c3"
+        >
+          <span>
+            My First Post at CodeLeap Network!
+          </span>
+        </div>
+      </header>
+      <div
+        class="c4"
+      >
+        <div
+          class="c5"
+        >
+          <h2
+            class="c6"
+          >
+            vitor
+          </h2>
+          <span
+            class="c7"
+          >
+            0 seconds ago
+          </span>
+        </div>
+        <p
+          class="c8"
+        >
+          Curabitur suscipit suscipit tellus. Phasellus consectetuer vestibulum elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
