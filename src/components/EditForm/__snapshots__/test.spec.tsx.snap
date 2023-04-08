@@ -198,12 +198,13 @@ exports[`<EditForm /> should match snapshot 1`] = `
     >
       <button
         class="c6"
-        type="submit"
+        type="button"
       >
         Cancel
       </button>
       <button
         class="c7"
+        disabled=""
         type="submit"
       >
         Save

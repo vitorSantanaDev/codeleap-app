@@ -1,13 +1,18 @@
 import React from 'react'
+
 import { screen } from '@testing-library/react'
 
-import { renderWithTheme } from 'utils/render-with-theme'
+import { renderWithProviders } from 'utils/render-with-theme'
 
 import EditForm from '.'
 
+jest.mock('hooks/useStateSelector', () => ({
+  useStateSelector: () => ({ state: { editPostModal: { postID: 22 } } })
+}))
+
 describe('<EditForm />', () => {
   it('should render the form', () => {
-    renderWithTheme(<EditForm />)
+    renderWithProviders(<EditForm />)
 
     const titleInput = screen.getByPlaceholderText(/title/i)
     expect(titleInput).toBeInTheDocument()
@@ -23,7 +28,7 @@ describe('<EditForm />', () => {
   })
 
   it('should match snapshot', () => {
-    const { container } = renderWithTheme(<EditForm />)
+    const { container } = renderWithProviders(<EditForm />)
     expect(container.firstChild).toMatchSnapshot()
   })
 })
