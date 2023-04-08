@@ -3,6 +3,8 @@ import storage from 'redux-persist/lib/storage'
 import { userReducer } from './actions/user-slice'
 import { persistReducer, persistStore } from 'redux-persist'
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
+import { editPostModalReducer } from './actions/edit-post-slice'
+import { deletePostAlertReducer } from './actions/delete-post-slice'
 
 const persistConfig = {
   key: 'root',
@@ -10,9 +12,13 @@ const persistConfig = {
   whitelist: ['user']
 }
 
-const rootReducer = combineReducers({ user: userReducer })
+const rootReducer = combineReducers({
+  user: userReducer,
+  editPostModal: editPostModalReducer,
+  deletePostAlert: deletePostAlertReducer
+})
 
-const persistedReducer = persistReducer(persistConfig, rootReducer)
+export const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export const store = configureStore({
   reducer: persistedReducer,
@@ -20,6 +26,6 @@ export const store = configureStore({
   middleware: [thunk]
 })
 
-export type RootState = ReturnType<typeof store.getState>
+export type RootState = ReturnType<typeof persistedReducer>
 
 export const persistor = persistStore(store)
