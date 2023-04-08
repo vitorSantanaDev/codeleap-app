@@ -1,26 +1,26 @@
 import React from 'react'
-import { renderWithTheme } from 'utils/render-with-theme'
+import { renderWithProviders } from 'utils/render-with-providers'
 import TextInput from '.'
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
 describe('<TextInput />', () => {
   it('should render input with label', () => {
-    renderWithTheme(<TextInput label="Title" name="title" />)
+    renderWithProviders(<TextInput label="Title" name="title" />)
 
     const input = screen.getByLabelText(/title/i)
     expect(input).toBeInTheDocument()
   })
 
   it('should render input without label', () => {
-    renderWithTheme(<TextInput name="title" />)
+    renderWithProviders(<TextInput name="title" />)
 
     const input = screen.queryByLabelText(/title/i)
     expect(input).not.toBeInTheDocument()
   })
 
   it('should render with placeholder', () => {
-    renderWithTheme(<TextInput placeholder="Title" />)
+    renderWithProviders(<TextInput placeholder="Title" />)
 
     const input = screen.getByPlaceholderText('Title')
     expect(input).toBeInTheDocument()
@@ -28,7 +28,7 @@ describe('<TextInput />', () => {
 
   it('should there must ne changes in the value whwn typing in the input', async () => {
     const handleChange = jest.fn()
-    renderWithTheme(
+    renderWithProviders(
       <TextInput handleChange={handleChange} label="Title" name="title" />
     )
 
@@ -46,7 +46,7 @@ describe('<TextInput />', () => {
   })
 
   it('should match snapshot', () => {
-    const { container } = renderWithTheme(
+    const { container } = renderWithProviders(
       <TextInput label="Title" name="title" />
     )
     expect(container.firstChild).toMatchSnapshot()

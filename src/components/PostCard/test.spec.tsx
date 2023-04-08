@@ -1,7 +1,7 @@
 import React from 'react'
 
 import PostCard from '.'
-import { renderWithProviders } from 'utils/render-with-theme'
+import { renderWithProviders } from 'utils/render-with-providers'
 import { screen } from '@testing-library/react'
 
 const postMock = {

@@ -1,26 +1,26 @@
 import React from 'react'
-import { renderWithTheme } from 'utils/render-with-theme'
+import { renderWithProviders } from 'utils/render-with-providers'
 import TextAreaInput from '.'
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
 describe('<TextAreaInput />', () => {
   it('should render textarea with label', () => {
-    renderWithTheme(<TextAreaInput label="content" name="content" />)
+    renderWithProviders(<TextAreaInput label="content" name="content" />)
 
     const input = screen.getByLabelText(/content/i)
     expect(input).toBeInTheDocument()
   })
 
   it('should render textarea without label', () => {
-    renderWithTheme(<TextAreaInput name="content" />)
+    renderWithProviders(<TextAreaInput name="content" />)
 
     const input = screen.queryByLabelText(/content/i)
     expect(input).not.toBeInTheDocument()
   })
 
   it('should render with placeholder', () => {
-    renderWithTheme(<TextAreaInput placeholder="content" />)
+    renderWithProviders(<TextAreaInput placeholder="content" />)
 
     const input = screen.getByPlaceholderText('content')
     expect(input).toBeInTheDocument()
@@ -28,7 +28,7 @@ describe('<TextAreaInput />', () => {
 
   it('should there must ne changes in the value whwn typing in the textarea', async () => {
     const handleChange = jest.fn()
-    renderWithTheme(
+    renderWithProviders(
       <TextAreaInput
         handleChange={handleChange}
         label="content"
@@ -50,7 +50,7 @@ describe('<TextAreaInput />', () => {
   })
 
   it('should match snapshot', () => {
-    const { container } = renderWithTheme(
+    const { container } = renderWithProviders(
       <TextAreaInput label="content" name="content" />
     )
     expect(container.firstChild).toMatchSnapshot()

@@ -1,13 +1,13 @@
 import React from 'react'
 
 import { screen } from '@testing-library/react'
-import { renderWithTheme } from 'utils/render-with-theme'
+import { renderWithProviders } from 'utils/render-with-providers'
 
 import Modal from '.'
 
 describe('<Modal />', () => {
   it('should render modal content', () => {
-    renderWithTheme(
+    renderWithProviders(
       <Modal isVisible>
         <h1>Modal</h1>
       </Modal>
@@ -24,7 +24,7 @@ describe('<Modal />', () => {
   })
 
   it('should not render modal when isVisible is false', () => {
-    renderWithTheme(
+    renderWithProviders(
       <Modal isVisible={false}>
         <h1>Modal</h1>
       </Modal>
@@ -40,7 +40,7 @@ describe('<Modal />', () => {
   })
 
   it('should match snapshot', () => {
-    const { container } = renderWithTheme(
+    const { container } = renderWithProviders(
       <Modal isVisible={true}>
         <h1>Modal</h1>
       </Modal>

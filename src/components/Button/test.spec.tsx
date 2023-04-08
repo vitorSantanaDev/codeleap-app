@@ -1,12 +1,12 @@
 import React from 'react'
-import { renderWithTheme } from 'utils/render-with-theme'
+import { renderWithProviders } from 'utils/render-with-providers'
 import Button from '.'
 import { screen } from '@testing-library/react'
 import theme from 'styles/theme'
 
 describe('<Button />', () => {
   it('should render button background with default color', () => {
-    renderWithTheme(<Button>Button</Button>)
+    renderWithProviders(<Button>Button</Button>)
 
     const button = screen.getByRole('button', { name: /button/i })
     expect(button).toBeInTheDocument()
@@ -15,7 +15,7 @@ describe('<Button />', () => {
   })
 
   it('should render button with background red', () => {
-    renderWithTheme(<Button bgColor="red">Button</Button>)
+    renderWithProviders(<Button bgColor="red">Button</Button>)
 
     const button = screen.getByRole('button', { name: /button/i })
 
@@ -26,7 +26,7 @@ describe('<Button />', () => {
   })
 
   it('should render button with background red', () => {
-    renderWithTheme(<Button bgColor="red">Button</Button>)
+    renderWithProviders(<Button bgColor="red">Button</Button>)
 
     const button = screen.getByRole('button', { name: /button/i })
 
@@ -37,7 +37,7 @@ describe('<Button />', () => {
   })
 
   it('should render button with background green', () => {
-    renderWithTheme(<Button bgColor="green">Button</Button>)
+    renderWithProviders(<Button bgColor="green">Button</Button>)
 
     const button = screen.getByRole('button', { name: /button/i })
 
@@ -48,7 +48,7 @@ describe('<Button />', () => {
   })
 
   it('should render button with background white, and borders with color gray', () => {
-    renderWithTheme(<Button bgColor="white">Button</Button>)
+    renderWithProviders(<Button bgColor="white">Button</Button>)
 
     const button = screen.getByRole('button', { name: /button/i })
 
@@ -60,7 +60,7 @@ describe('<Button />', () => {
   })
 
   it('should render button with disabled style', () => {
-    renderWithTheme(<Button bgColor="white">Button</Button>)
+    renderWithProviders(<Button bgColor="white">Button</Button>)
 
     const button = screen.getByRole('button', { name: /button/i })
 
@@ -70,7 +70,7 @@ describe('<Button />', () => {
   })
 
   it('should match snapshot', () => {
-    const { container } = renderWithTheme(<Button>Button</Button>)
+    const { container } = renderWithProviders(<Button>Button</Button>)
     expect(container.firstChild).toMatchSnapshot()
   })
 })

@@ -1,11 +1,11 @@
 import React from 'react'
-import { renderWithTheme } from 'utils/render-with-theme'
+import { renderWithProviders } from 'utils/render-with-providers'
 import Header from '.'
 import { screen } from '@testing-library/react'
 
 describe('<Header />', () => {
   it('should render header', () => {
-    const { container } = renderWithTheme(
+    const { container } = renderWithProviders(
       <Header>
         <span>CodeLeap</span>
       </Header>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { screen } from '@testing-library/react'
 
-import { renderWithProviders } from 'utils/render-with-theme'
+import { renderWithProviders } from 'utils/render-with-providers'
 import { Post } from 'components/PostCard/types'
 
 import Feed from '.'

@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux'
-import React, { PropsWithChildren, ReactElement } from 'react'
+import React, { PropsWithChildren } from 'react'
 
 import theme from 'styles/theme'
 import { ThemeProvider } from 'styled-components'
@@ -9,9 +9,6 @@ import { RootState } from 'redux/store'
 import { userReducer } from 'redux/actions/user-slice'
 import { PreloadedState, configureStore } from '@reduxjs/toolkit'
 import { QueryClient, QueryClientProvider } from 'react-query'
-
-export const renderWithTheme = (component: ReactElement) =>
-  render(<ThemeProvider theme={theme}>{component}</ThemeProvider>)
 
 interface ExtendedRenderOptions extends Omit<RenderOptions, 'queries'> {
   initialState?: PreloadedState<RootState>

@@ -1,12 +1,12 @@
 import React from 'react'
 
-import { renderWithTheme } from 'utils/render-with-theme'
+import { renderWithProviders } from 'utils/render-with-providers'
 
 import * as BaseFormLayout from '.'
 
 describe('<BaseFormLayout />', () => {
   it('should render the BaseFormLayout', () => {
-    const { container } = renderWithTheme(
+    const { container } = renderWithProviders(
       <BaseFormLayout.FormWrapper>
         <BaseFormLayout.Form>
           <button>submit teste</button>

@@ -1,13 +1,13 @@
 import React from 'react'
 import { screen } from '@testing-library/react'
-import { renderWithTheme } from 'utils/render-with-theme'
+import { renderWithProviders } from 'utils/render-with-providers'
 
 import theme from 'styles/theme'
 import Heading from '.'
 
 describe('<Heading />', () => {
   it('should render heading with default color and default size', () => {
-    renderWithTheme(<Heading>Heading</Heading>)
+    renderWithProviders(<Heading>Heading</Heading>)
 
     const heading = screen.getByRole('heading', { name: /heading/i })
     expect(heading).toBeInTheDocument()
@@ -19,7 +19,7 @@ describe('<Heading />', () => {
   })
 
   it('should render heading with color white and large size', () => {
-    renderWithTheme(
+    renderWithProviders(
       <Heading color="white" size="xlarge">
         Heading
       </Heading>
@@ -34,7 +34,7 @@ describe('<Heading />', () => {
   })
 
   it('should render heading with color gray', () => {
-    renderWithTheme(<Heading color="gray">Heading</Heading>)
+    renderWithProviders(<Heading color="gray">Heading</Heading>)
 
     const heading = screen.getByRole('heading', { name: /heading/i })
 
@@ -44,7 +44,7 @@ describe('<Heading />', () => {
   })
 
   it('should match snapshot', () => {
-    const { container } = renderWithTheme(<Heading>Heading</Heading>)
+    const { container } = renderWithProviders(<Heading>Heading</Heading>)
     expect(container.firstChild).toMatchSnapshot()
   })
 })

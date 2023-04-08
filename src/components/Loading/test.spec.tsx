@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { renderWithProviders } from 'utils/render-with-theme'
+import { renderWithProviders } from 'utils/render-with-providers'
 import Loading from '.'
 
 describe('<Loading />', () => {
