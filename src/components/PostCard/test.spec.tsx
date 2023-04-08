@@ -1,7 +1,7 @@
 import React from 'react'
 
 import PostCard from '.'
-import { renderWithTheme } from 'utils/render-with-theme'
+import { renderWithProviders } from 'utils/render-with-theme'
 import { screen } from '@testing-library/react'
 
 const postMock = {
@@ -14,7 +14,7 @@ const postMock = {
 
 describe('<PostCard />', () => {
   it('should render the post', () => {
-    renderWithTheme(<PostCard post={postMock} />)
+    renderWithProviders(<PostCard post={postMock} />)
 
     const username = screen.getByText(/@victor/i)
     expect(username).toBeInTheDocument()
@@ -37,7 +37,7 @@ describe('<PostCard />', () => {
   })
 
   it('should render post with action buttons, when myPost is true', () => {
-    renderWithTheme(<PostCard myPost post={postMock} />)
+    renderWithProviders(<PostCard myPost post={postMock} />)
 
     const buttonDeletePost = screen.getByRole('button', {
       name: /trash icon/i
@@ -51,7 +51,9 @@ describe('<PostCard />', () => {
   })
 
   it('should match snapshot', () => {
-    const { container } = renderWithTheme(<PostCard myPost post={postMock} />)
+    const { container } = renderWithProviders(
+      <PostCard myPost post={postMock} />
+    )
     expect(container.firstChild).toMatchSnapshot()
   })
 })

@@ -10,8 +10,8 @@ export const Wrapper = styled.div`
     }
 
     border: 1px solid ${theme.colors.gray};
-    border-bottom-right-radius: ${theme.border.radius};
-    border-bottom-left-radius: ${theme.border.radius};
+    border-radius: ${theme.border.radius};
+    border-radius: ${theme.border.radius};
   `}
 `
 
@@ -29,6 +29,10 @@ export const ActionButtonsWrapper = styled.div`
     display: flex;
     align-items: center;
     gap: ${theme.spacings.medium};
+
+    img {
+      cursor: pointer;
+    }
   `}
 `
 
