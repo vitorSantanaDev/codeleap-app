@@ -104,6 +104,7 @@ exports[`<Feed /> should macth snapshots 1`] = `
           <h2
             class="c6"
           >
+            @
             Cassia
           </h2>
           <span
@@ -146,6 +147,7 @@ exports[`<Feed /> should macth snapshots 1`] = `
           <h2
             class="c6"
           >
+            @
             Fran
           </h2>
           <span
@@ -188,6 +190,7 @@ exports[`<Feed /> should macth snapshots 1`] = `
           <h2
             class="c6"
           >
+            @
             vitor
           </h2>
           <span

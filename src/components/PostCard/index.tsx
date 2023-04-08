@@ -48,7 +48,7 @@ const PostCard: React.FC<PostCardProps> = ({ myPost, post }) => {
       </Header>
       <S.Content>
         <S.PostInfoWrapper>
-          <S.UserNameText>{post.username}</S.UserNameText>
+          <S.UserNameText>@{post.username}</S.UserNameText>
           <S.PostTimeText>{postTimeLabel}</S.PostTimeText>
         </S.PostInfoWrapper>
         <S.Description>{post.content}</S.Description>
