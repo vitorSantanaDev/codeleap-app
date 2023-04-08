@@ -1,46 +1,61 @@
-# Getting Started with Create React App
+# A simple CRUD of the posts made in React.JS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p>CodeLeap Network</p>
 
-## Available Scripts
+<p>
+  <img src="https://img.shields.io/badge/made%20by-Vitor%20Santana-7695EC?style=flat-square">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/vitorSantanaDev/client-codesec-clone?color=7695EC&style=flat-square">
+  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/vitorSantanaDev/codeleap-app?color=7695EC&style=flat-square">
+</p>
 
-In the project directory, you can run:
+## Tópicos
 
-### `yarn start`
+[Tecnologias e Ferramentas](#tecnologias-e-ferramentas)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[Instalação e uso](#instalação-e-uso)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br>
 
-### `yarn test`
+## Tecnologias e Ferramentas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+As seguintes tecnologias foram utilizadas no desenvolvimento do projeto:
 
-### `yarn build`
+- [React.JS](https://pt-br.reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [styled-components](https://styled-components.com/)
+- [Redux](https://redux.js.org/)
+- [Jest](https://jestjs.io/pt-BR/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [React Query](https://tanstack.com/query/v3/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Instalação e Uso
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para rodar a aplicação, você precisa instalar o [Node](https://nodejs.org/en/)
 
-### `yarn eject`
+Siga os passos abaixo:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+# Abra um terminal e copie este repositório com o comando
+$ git clone https://github.com/vitorSantanaDev/codeleap-app.git
+# ou use a opção de download.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Entre na pasta com
+$ cd codeleap-app
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Instale as dependências
+$ yarn install
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Rode a aplicação
+$ yarn start
+```
 
-## Learn More
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feito com :technologist: by [Vitor_Santana](https://github.com/vitorSantanaDev)
+
+[![Linkedin Badge](https://img.shields.io/badge/-Vitor%20Santana-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/vitor-santana-bbb607217/)](https://www.linkedin.com/in/vitor-santana-bbb607217/)
+[![Gmail Badge](https://img.shields.io/badge/-vitorsantana.developer@gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:vitorsantana.developer@gmail)](mailto:vitorsantana.developer@gmail)
