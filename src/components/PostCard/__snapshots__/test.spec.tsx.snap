@@ -9,6 +9,12 @@ exports[`<PostCard /> should match snapshot 1`] = `
   font-size: calc(2.0rem + 0.2rem);
 }
 
+.c3 {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 130rem;
+}
+
 .c0 {
   border: 1px solid #999999;
   border-radius: 0.8rem;
@@ -20,7 +26,7 @@ exports[`<PostCard /> should match snapshot 1`] = `
   border-top-left-radius: 0.8rem;
 }
 
-.c3 {
+.c4 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -36,7 +42,7 @@ exports[`<PostCard /> should match snapshot 1`] = `
   justify-content: space-between;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -48,16 +54,16 @@ exports[`<PostCard /> should match snapshot 1`] = `
   gap: 3.2rem;
 }
 
-.c4 img {
+.c5 img {
   cursor: pointer;
 }
 
-.c5 {
+.c6 {
   width: 100%;
   padding: 2.4rem;
 }
 
-.c6 {
+.c7 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -74,19 +80,19 @@ exports[`<PostCard /> should match snapshot 1`] = `
   margin-bottom: 1.6rem;
 }
 
-.c7 {
+.c8 {
   font-weight: 700;
   color: #777777;
   font-size: calc(1.6rem + 0.2rem);
 }
 
-.c8 {
+.c9 {
   font-weight: 400;
   color: #777777;
   font-size: calc(1.6rem + 0.2rem);
 }
 
-.c9 {
+.c10 {
   color: #000000;
   font-weight: 400;
   font-size: calc(1.6rem + 0.2rem);
@@ -101,47 +107,51 @@ exports[`<PostCard /> should match snapshot 1`] = `
     <div
       class="c3"
     >
-      <p>
-        My First Post at CodeLeap Network!
-      </p>
       <div
         class="c4"
       >
-        <img
-          alt="Trash icon"
-          aria-label="Trash icon"
-          role="button"
-          src="delete-icon.svg"
-        />
-        <img
-          alt="Edit icon"
-          aria-label="Edit icon"
-          role="button"
-          src="bx_bx-edit.svg"
-        />
+        <p>
+          My First Post at CodeLeap Network!
+        </p>
+        <div
+          class="c5"
+        >
+          <img
+            alt="Trash icon"
+            aria-label="Trash icon"
+            role="button"
+            src="delete-icon.svg"
+          />
+          <img
+            alt="Edit icon"
+            aria-label="Edit icon"
+            role="button"
+            src="bx_bx-edit.svg"
+          />
+        </div>
       </div>
     </div>
   </header>
   <div
-    class="c5"
+    class="c6"
   >
     <div
-      class="c6"
+      class="c7"
     >
       <h2
-        class="c7"
+        class="c8"
       >
         @
         @Victor
       </h2>
       <span
-        class="c8"
+        class="c9"
       >
         07/03/2023
       </span>
     </div>
     <p
-      class="c9"
+      class="c10"
     >
       Curabitur suscipit suscipit tellus.
     </p>

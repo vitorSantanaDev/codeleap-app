@@ -9,6 +9,12 @@ exports[`<Feed /> should macth snapshots 1`] = `
   font-size: calc(2.0rem + 0.2rem);
 }
 
+.c3 {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 130rem;
+}
+
 .c0 {
   border: 1px solid #999999;
   border-radius: 0.8rem;
@@ -20,7 +26,7 @@ exports[`<Feed /> should macth snapshots 1`] = `
   border-top-left-radius: 0.8rem;
 }
 
-.c3 {
+.c4 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -36,12 +42,12 @@ exports[`<Feed /> should macth snapshots 1`] = `
   justify-content: space-between;
 }
 
-.c4 {
+.c5 {
   width: 100%;
   padding: 2.4rem;
 }
 
-.c5 {
+.c6 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -58,32 +64,32 @@ exports[`<Feed /> should macth snapshots 1`] = `
   margin-bottom: 1.6rem;
 }
 
-.c6 {
+.c7 {
   font-weight: 700;
   color: #777777;
   font-size: calc(1.6rem + 0.2rem);
 }
 
-.c7 {
+.c8 {
   font-weight: 400;
   color: #777777;
   font-size: calc(1.6rem + 0.2rem);
 }
 
-.c8 {
+.c9 {
   color: #000000;
   font-weight: 400;
   font-size: calc(1.6rem + 0.2rem);
 }
 
-.c10 {
+.c11 {
   display: inline-block;
   position: relative;
   width: 8rem;
   height: 8rem;
 }
 
-.c10 div {
+.c11 div {
   position: absolute;
   top: 3.3rem;
   width: 1.3rem;
@@ -94,31 +100,31 @@ exports[`<Feed /> should macth snapshots 1`] = `
   animation-timing-function: cubic-bezier(0,1,1,0);
 }
 
-.c10 div:nth-child(1) {
+.c11 div:nth-child(1) {
   left: 0.8rem;
   -webkit-animation: lds-ellipsis1 0.6s infinite;
   animation: lds-ellipsis1 0.6s infinite;
 }
 
-.c10 div:nth-child(2) {
+.c11 div:nth-child(2) {
   left: 0.8rem;
   -webkit-animation: lds-ellipsis2 0.6s infinite;
   animation: lds-ellipsis2 0.6s infinite;
 }
 
-.c10 div:nth-child(3) {
+.c11 div:nth-child(3) {
   left: 3.2rem;
   -webkit-animation: lds-ellipsis2 0.6s infinite;
   animation: lds-ellipsis2 0.6s infinite;
 }
 
-.c10 div:nth-child(4) {
+.c11 div:nth-child(4) {
   left: 5.6rem;
   -webkit-animation: lds-ellipsis3 0.6s infinite;
   animation: lds-ellipsis3 0.6s infinite;
 }
 
-.c9 {
+.c10 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -149,31 +155,35 @@ exports[`<Feed /> should macth snapshots 1`] = `
         <div
           class="c3"
         >
-          <p>
-            My First Post at CodeLeap Network!
-          </p>
+          <div
+            class="c4"
+          >
+            <p>
+              My First Post at CodeLeap Network!
+            </p>
+          </div>
         </div>
       </header>
       <div
-        class="c4"
+        class="c5"
       >
         <div
-          class="c5"
+          class="c6"
         >
           <h2
-            class="c6"
+            class="c7"
           >
             @
             Cassia
           </h2>
           <span
-            class="c7"
+            class="c8"
           >
             0 seconds ago
           </span>
         </div>
         <p
-          class="c8"
+          class="c9"
         >
           Curabitur suscipit suscipit tellus. Phasellus consectetuer vestibulum elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         </p>
@@ -192,31 +202,35 @@ exports[`<Feed /> should macth snapshots 1`] = `
         <div
           class="c3"
         >
-          <p>
-            My First Post at CodeLeap Network!
-          </p>
+          <div
+            class="c4"
+          >
+            <p>
+              My First Post at CodeLeap Network!
+            </p>
+          </div>
         </div>
       </header>
       <div
-        class="c4"
+        class="c5"
       >
         <div
-          class="c5"
+          class="c6"
         >
           <h2
-            class="c6"
+            class="c7"
           >
             @
             Fran
           </h2>
           <span
-            class="c7"
+            class="c8"
           >
             0 seconds ago
           </span>
         </div>
         <p
-          class="c8"
+          class="c9"
         >
           Curabitur suscipit suscipit tellus. Phasellus consectetuer vestibulum elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         </p>
@@ -235,31 +249,35 @@ exports[`<Feed /> should macth snapshots 1`] = `
         <div
           class="c3"
         >
-          <p>
-            My First Post at CodeLeap Network!
-          </p>
+          <div
+            class="c4"
+          >
+            <p>
+              My First Post at CodeLeap Network!
+            </p>
+          </div>
         </div>
       </header>
       <div
-        class="c4"
+        class="c5"
       >
         <div
-          class="c5"
+          class="c6"
         >
           <h2
-            class="c6"
+            class="c7"
           >
             @
             vitor
           </h2>
           <span
-            class="c7"
+            class="c8"
           >
             0 seconds ago
           </span>
         </div>
         <p
-          class="c8"
+          class="c9"
         >
           Curabitur suscipit suscipit tellus. Phasellus consectetuer vestibulum elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         </p>
@@ -267,11 +285,11 @@ exports[`<Feed /> should macth snapshots 1`] = `
     </div>
   </div>
   <div
-    class="c9"
+    class="c10"
     id="loadingMorePosts"
   >
     <div
-      class="c10"
+      class="c11"
     >
       <div />
       <div />

@@ -10,3 +10,11 @@ export const Wrapper = styled.header`
     font-size: calc(${theme.font.sizes.xlarge} + 0.2rem);
   `}
 `
+
+export const HeaderContainer = styled.div`
+  ${({ theme }) => css`
+    width: 100%;
+    margin: 0 auto;
+    max-width: ${theme.grid.container};
+  `}
+`

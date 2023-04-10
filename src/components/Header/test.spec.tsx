@@ -23,12 +23,22 @@ describe('<Header />', () => {
         font-size: calc(2.0rem + 0.2rem);
       }
 
+      .c1 {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 130rem;
+      }
+
       <header
         class="c0"
       >
-        <span>
-          CodeLeap
-        </span>
+        <div
+          class="c1"
+        >
+          <span>
+            CodeLeap
+          </span>
+        </div>
       </header>
     `)
   })
