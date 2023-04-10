@@ -38,6 +38,7 @@ export const ActionButtonsWrapper = styled.div`
 
 export const Content = styled.div`
   ${({ theme }) => css`
+    width: 100%;
     padding: ${theme.spacings.small};
   `}
 `

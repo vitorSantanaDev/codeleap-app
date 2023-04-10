@@ -14,10 +14,12 @@ import { useGetAllPosts, useMutationEditPost } from 'services/post.services'
 
 import * as BaseFormLayout from 'components/Layouts/BaseFormLayout'
 
-const EditForm: React.FC = () => {
+const EditForm: React.FC<{ refetchPostsData?: () => void }> = ({
+  refetchPostsData
+}) => {
   const dispatch = useDispatch()
 
-  const { data: postsData, refetch: refetchPostsData } = useGetAllPosts()
+  const { data: postsData } = useGetAllPosts()
 
   const postID = useStateSelector((state) => state.editPostModal.postID)
 
@@ -44,9 +46,9 @@ const EditForm: React.FC = () => {
         payload: { content: inputsValues.content, title: inputsValues.title },
         postID: postID
       })
-      refetchPostsData()
       setInputValues({ content: '', title: '' })
       dispatch(toggleEditPostModal(null))
+      refetchPostsData?.()
       toast.success('Post successfully updated')
     }
   }

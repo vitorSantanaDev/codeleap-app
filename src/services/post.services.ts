@@ -81,3 +81,37 @@ export const deletePostService = async (payload: DeletePostRequest) => {
 export const useMutationDeletePost = () => {
   return useMutation(deletePostService)
 }
+
+type FetchPostsRequest = {
+  offset?: number
+  limit?: number
+}
+
+export const fetchPosts = async ({
+  limit = 10,
+  offset = 10
+}: FetchPostsRequest) => {
+  try {
+    const response = await axiosInstance.get(
+      `/careers/?limit=${limit}&offset=${offset}`
+    )
+    return response.data.results
+  } catch (err) {
+    const error = err as { message: string }
+    toast.error(error.message)
+  }
+}
+
+export const useFetchPosts = (
+  params?: FetchPostsRequest
+): UseQueryResult<Post[]> => {
+  return useQuery(
+    QUERIES.INFINITY_POSTS,
+    async () =>
+      await fetchPosts({ limit: params?.limit, offset: params?.offset }),
+    {
+      retry: 2,
+      refetchOnWindowFocus: true
+    }
+  )
+}

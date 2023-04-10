@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
 import { useDispatch } from 'react-redux'
 
@@ -9,23 +9,31 @@ import Button from 'components/Button'
 import Loading from 'components/Loading'
 import Heading from 'components/Heading'
 import EditForm from 'components/EditForm'
+import { Post } from 'components/PostCard/types'
 import CreationForm from 'components/CreationForm'
 import { ButtonWrapper } from 'components/Layouts/BaseFormLayout'
 
+import { useInView } from 'react-intersection-observer'
 import { useStateSelector } from 'hooks/useStateSelector'
 import { toggleDeletePostAlert } from 'redux/actions/delete-post-slice'
-import { useGetAllPosts, useMutationDeletePost } from 'services/post.services'
+import { useFetchPosts, useMutationDeletePost } from 'services/post.services'
 
 import * as S from './styles'
 
 const MainPage = () => {
   const dispatch = useDispatch()
+
+  const [offsetPosts, setOffsetPosts] = useState(0)
+  const { ref, inView } = useInView()
+
   const {
+    isLoading,
     isRefetching,
-    data: postsData,
-    refetch: refetchPostsData,
-    isLoading: isLoadingPostsData
-  } = useGetAllPosts()
+    data: fetchPostsData,
+    refetch: refetchPostsData
+  } = useFetchPosts({ offset: offsetPosts })
+
+  const [postsData, setPostsData] = useState<Post[]>([])
 
   const { mutateAsync: deletePostMutation } = useMutationDeletePost()
 
@@ -44,10 +52,25 @@ const MainPage = () => {
     if (postIdToDelete) {
       await deletePostMutation({ postID: postIdToDelete })
       dispatch(toggleDeletePostAlert(null))
+      await refetchPostsData()
       toast.success('Post successfully deleted')
-      refetchPostsData()
     }
   }
+
+  useEffect(() => {
+    if (inView) setOffsetPosts((prevState) => (prevState += 10))
+  }, [inView])
+
+  useEffect(() => {
+    if (fetchPostsData && fetchPostsData) {
+      setPostsData((prevState) => [...fetchPostsData, ...prevState])
+    }
+  }, [fetchPostsData])
+
+  useEffect(() => {
+    ;(async () => await refetchPostsData())()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [offsetPosts])
 
   return (
     <S.Wrapper>
@@ -58,16 +81,20 @@ const MainPage = () => {
         </S.FormCreationWrapper>
 
         <S.FeedWrapper>
-          {isLoadingPostsData || isRefetching ? (
+          {isLoading && !isRefetching ? (
             <Loading />
-          ) : postsData?.length ? (
-            <Feed posts={postsData} />
+          ) : postsData.length ? (
+            <Feed
+              ref={ref}
+              posts={postsData}
+              isRefetchingPostsData={isRefetching}
+            />
           ) : null}
         </S.FeedWrapper>
       </S.Container>
       {showEditPostModal && (
         <Modal isVisible={showEditPostModal}>
-          <EditForm />
+          <EditForm refetchPostsData={refetchPostsData} />
         </Modal>
       )}
 

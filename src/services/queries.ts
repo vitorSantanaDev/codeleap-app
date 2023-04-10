@@ -1,3 +1,4 @@
 export enum QUERIES {
-  POSTS = 'POSTS'
+  POSTS = 'POSTS',
+  INFINITY_POSTS = 'INFINITY_POSTS'
 }

@@ -27,7 +27,7 @@ const PostCard: React.FC<PostCardProps> = ({ myPost, post }) => {
     <S.Wrapper>
       <Header>
         <S.HeaderContent>
-          <span>{post.title}</span>
+          <p>{post.title}</p>
           {!!myPost && (
             <S.ActionButtonsWrapper>
               <img
