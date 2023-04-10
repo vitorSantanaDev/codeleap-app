@@ -51,6 +51,9 @@ const MainPage = () => {
   const handleDeletePost = async () => {
     if (postIdToDelete) {
       await deletePostMutation({ postID: postIdToDelete })
+      setPostsData((prevState) =>
+        [...prevState].filter((item) => item.id !== postIdToDelete)
+      )
       dispatch(toggleDeletePostAlert(null))
       await refetchPostsData()
       toast.success('Post successfully deleted')
@@ -63,8 +66,18 @@ const MainPage = () => {
 
   useEffect(() => {
     if (fetchPostsData && fetchPostsData) {
-      setPostsData((prevState) => [...fetchPostsData, ...prevState])
+      const setPosts = new Set()
+      const postsState = [...fetchPostsData, ...postsData]
+
+      const newPostsState = postsState.filter((post) => {
+        const duplicatedPost = setPosts.has(post.id)
+        setPosts.add(post.id)
+        return !duplicatedPost
+      })
+
+      setPostsData(newPostsState)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetchPostsData])
 
   useEffect(() => {
