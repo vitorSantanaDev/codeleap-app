@@ -9,6 +9,7 @@ import { RootState } from 'redux/store'
 import { userReducer } from 'redux/actions/user-slice'
 import { PreloadedState, configureStore } from '@reduxjs/toolkit'
 import { QueryClient, QueryClientProvider } from 'react-query'
+import { ToastContainer } from 'react-toastify'
 
 interface ExtendedRenderOptions extends Omit<RenderOptions, 'queries'> {
   initialState?: PreloadedState<RootState>
@@ -31,7 +32,10 @@ export const renderWithProviders = (
     return (
       <QueryClientProvider client={new QueryClient()}>
         <Provider store={store}>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          <ThemeProvider theme={theme}>
+            {children}
+            <ToastContainer />
+          </ThemeProvider>
         </Provider>
       </QueryClientProvider>
     )
