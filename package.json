@@ -71,5 +71,20 @@
     "jest-styled-components": "^7.1.1",
     "msw": "^1.2.1",
     "prettier": "^2.8.7"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!<rootDir>/src/*.{ts,tsx}",
+      "!<rootDir>/src/styles/*.{ts,tsx}",
+      "!<rootDir>/src/routes/*.{ts,tsx}",
+      "!<rootDir>/src/redux/*.{ts,tsx}",
+      "!<rootDir>/src/services/*.{ts,tsx}",
+      "!<rootDir>/src/types/*.{ts,tsx}",
+      "!<rootDir>/src/utils/mockServer/*.{ts,tsx}",
+      "!<rootDir>/src/helpers/**/*.{ts,tsx}",
+      "!<rootDir>/src/hooks/*.ts,tsx}",
+      "!<rootDir>/node_modules/"
+    ]
   }
 }
