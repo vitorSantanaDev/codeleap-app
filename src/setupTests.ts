@@ -4,3 +4,16 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom'
 import 'jest-styled-components'
+import { server } from 'utils/mockServer/server.mock'
+
+beforeAll(() => {
+  server.listen({ onUnhandledRequest: 'bypass' })
+})
+
+afterEach(() => {
+  server.resetHandlers()
+})
+
+afterAll(() => {
+  server.close()
+})
